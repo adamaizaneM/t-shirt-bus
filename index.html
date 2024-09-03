@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Home - My Website</title>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <button class="navbar-toggle" id="openSidebar">☰</button>
+        <div class="navbar-logo">
+            <img src="images/logo.png" alt="Logo" class="logo-icon">
+        </div>
+        <div class="navbar-icons">
+            <img src="images/settings-icon.png" alt="Settings" class="nav-icon">
+            <img src="images/user-icon.png" alt="User" class="nav-icon" id="userIcon">
+            <img src="images/cart-icon.png" alt="Cart" class="nav-icon">
+        </div>
+    </nav>
+
+    <!-- Sidebar Navigation -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" id="closeSidebar">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="careers.html">Careers</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <main id="main-content">
+        <div class="welcome-message">
+            <h1>Welcome to Our Website</h1>
+            <p>Discover our range of products and services designed to meet all your needs.</p>
+        </div>
+
+        <div class="content-area">
+            <div class="product-area">
+                <div class="item-card">
+                    <img src="images/item-image.png" alt="Item Image" class="item-image">
+                    <div class="item-info">
+                        <h2> </h2>
+                        <p>Description of the item goes here. It provides some details about the item.</p>
+                        <p class="price">£25.00</p>
+                        <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="cart-area">
+                <h2>Cart</h2>
+                <ul id="cart-items"></ul>
+                <p class="total-cost">Total: £<span id="total-cost">0.00</span></p>
+                <button class="credit-card-btn" id="openCreditCardModal">Add Credit Card</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLoginModal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" placeholder="Your Password" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Credit Card Modal -->
+    <div id="creditCardModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeCreditCardModal">&times;</span>
+            <h2>Add Credit Card</h2>
+            <form id="credit-card-form" class="credit-card-form">
+                <div class="form-group">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-expiry">Expiry Date:</label>
+                    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-cvc">CVC:</label>
+                    <input type="text" id="card-cvc" name="card-cvc" placeholder="CVC" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-holder">Card Holder Name:</label>
+                    <input type="text" id="card-holder" name="card-holder" placeholder="Card Holder Name" required>
+                </div>
+                <button type="submit" class="submit-btn">Save Card</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>@2024 yourwebsite</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

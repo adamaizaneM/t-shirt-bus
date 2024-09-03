@@ -1,0 +1,273 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    background: linear-gradient(to right, #141E30, #243B55); /* Blue gradient background */
+    color: #f5f5f5; /* Off-white text color for better readability */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ /* Semi-transparent black navbar */
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-icons .nav-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: transform 0.2s ease;
+}
+
+.navbar-icons .nav-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.navbar-toggle {
+    background: none;
+    border: none;
+    color: #f5f5f5; /* White */
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggle:hover {
+    transform: rotate(90deg); /* Rotate on hover for a fun effect */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(36, 59, 85, 0.95); /* Dark blue semi-transparent */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f5f5f5; /* White */
+    display: block;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #E63946; /* Bright red for hover effect */
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+    color: #f5f5f5; /* White */
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1002; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #2C3E50; /* Dark blue-grey background */
+    margin: 10% auto; /* Centered */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px; /* Limit max width */
+    color: #f5f5f5; /* White text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.close {
+    color: #f5f5f5; /* White */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #E63946; /* Bright red */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* User Icon and Logged In State */
+#userIcon {
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+#userIcon.logged-in {
+    transform: scale(1.2); /* Slightly larger when logged in */
+    content: url('images/avatar-icon.png'); /* Replace with avatar or initials */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #f5f5f5; /* White text */
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #444; /* Darker grey border */
+    border-radius: 5px;
+    background-color: #3C4F65; /* Dark blue-grey */
+    color: #f5f5f5; /* White text */
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #E63946; /* Bright red border on focus */
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #b0b0b0; /* Light grey placeholder */
+}
+
+.submit-btn {
+    background-color: #E63946; /* Red button */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #D62828; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Page Content Styling */
+.page-content {
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px; /* Adjust for fixed navbar */
+}
+
+/* Product and Cart Styling */
+.product-area, .cart-area {
+    background-color: rgba(44, 62, 80, 0.8); /* Dark blue-grey semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+    color: #f5f5f5; /* White text */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+}
+
+.product-area .item-card {
+    background-color: #1c1c1c; /* Darker grey */
+    padding: 20px;
+    border: 2px solid #E63946; /* Red border */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.product-area .item-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.cart-area {
+    border: 2px solid #E63946; /* Red border */
+    transition: transform 0.2s ease;
+}
+
+.cart-area h2 {
+    color: #E63946; /* Red heading */
+}
+
+.cart-area:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.total-cost {
+    color: #f5f5f5; /* White text */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Separator Styling */
+.separator {
+    width: 2px;
+    background-color: #E63946; /* Red separator */
+    margin: 0 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(44, 62, 80, 0.8); /* Dark blue-grey semi-transparent */
+    color: #f5f5f5; /* White text */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Top shadow for depth */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar-logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar-icons {
+        display: flex;
+        justify-content: center;
+    }
+}
